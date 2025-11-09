@@ -26,7 +26,7 @@ font-family: "DM Sans", sans-serif;
   --background-color: #050505; /* 웹사이트 전체 및 각 섹션의 배경색 */
   --default-color: #ffffff; /* 웹사이트 전반의 기본 텍스트 색상 */
   --heading-color: #ffffff; /* 제목, 소제목, 타이틀에 사용하는 색상 */
-  --accent-color: #ff3ea5; /* 버튼, 링크 등 강조 요소에 사용하는 색상 */
+  --accent-color: #7ec8ff; /* 버튼, 링크 등 강조 요소에 사용하는 색상 */
   --accent-hover-color: #c9a0ff; /* hover 시 사용할 강조 색상 */
   --surface-color: rgb(24, 24, 24); /* 섹션 내에서 카드, 아이콘 박스 등 박스 형태 요소들의 배경으로 사용되는 색상이며, 전체 배경과 시각적으로 구분되도록 도와줍니다. */
   --contrast-color: #000000; /* 강조색이나 배경 위에서 텍스트 가독성을 위한 대비 색상 */
@@ -35,7 +35,7 @@ font-family: "DM Sans", sans-serif;
 /* 내비게이션 메뉴 색상 정의 - 다음 색상 변수들은 내비게이션 메뉴에만 특별히 사용됩니다. 전역 색상과 분리되어 있어 더 많은 커스터마이징 옵션을 제공합니다. */
 :root {
   --nav-color: #ffffff;  /* 메인 내비게이션 메뉴 링크의 기본 색상 */
-  --nav-hover-color: #eaff74; /* 메인 내비게이션 메뉴 링크에 마우스를 올리거나 활성화 되었을 때 적용되는 색상 */
+  --nav-hover-color: #c9a0ff; /* 메인 내비게이션 메뉴 링크에 마우스를 올리거나 활성화 되었을 때 적용되는 색상 */
   --nav-mobile-background-color: #1a1a1a; /* 모바일 내비게이션 메뉴의 배경색으로 사용 */
 }
 
@@ -412,12 +412,8 @@ h6 {
   padding-top: 5px;
 }
 
-.footer .glow-line {
-  width: 100%;
-  height: 1px;
-  background: #c9a0ff;
-  box-shadow: 0 0 8px rgba(201, 160, 255, 0.6);
-  margin-bottom: 40px;
+.footer .creative-title {
+  color: #c9a0ff; /* 보라색 */
 }
 
 
