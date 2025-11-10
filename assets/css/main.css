@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
 .font-basic {
-font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -16,27 +16,37 @@ font-family: "DM Sans", sans-serif;
 }
 
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* 전역 색상 정의 - 아래 색상 변수들은 웹사이트 전반에 사용되며, 이 값을 수정하면 전체 색상 테마가 변경됩니다 */
-:root { 
-  --background-color: #050505; /* 웹사이트 전체 및 각 섹션의 배경색 */
-  --default-color: #ffffff; /* 웹사이트 전반의 기본 텍스트 색상 */
-  --heading-color: #ffffff; /* 제목, 소제목, 타이틀에 사용하는 색상 */
-  --accent-color: #c9a0ff; /* 버튼, 링크 등 강조 요소에 사용하는 색상 */
-  --accent-hover-color: #e3bfff; /* hover 시 사용할 강조 색상 */
-  --surface-color: rgb(24, 24, 24); /* 섹션 내에서 카드, 아이콘 박스 등 박스 형태 요소들의 배경으로 사용되는 색상이며, 전체 배경과 시각적으로 구분되도록 도와줍니다. */
-  --contrast-color: #000000; /* 강조색이나 배경 위에서 텍스트 가독성을 위한 대비 색상 */
+:root {
+  --background-color: #050505;
+  /* 웹사이트 전체 및 각 섹션의 배경색 */
+  --default-color: #ffffff;
+  /* 웹사이트 전반의 기본 텍스트 색상 */
+  --heading-color: #ffffff;
+  /* 제목, 소제목, 타이틀에 사용하는 색상 */
+  --accent-color: #c9a0ff;
+  /* 버튼, 링크 등 강조 요소에 사용하는 색상 */
+  --accent-hover-color: #e3bfff;
+  /* hover 시 사용할 강조 색상 */
+  --surface-color: rgb(24, 24, 24);
+  /* 섹션 내에서 카드, 아이콘 박스 등 박스 형태 요소들의 배경으로 사용되는 색상이며, 전체 배경과 시각적으로 구분되도록 도와줍니다. */
+  --contrast-color: #000000;
+  /* 강조색이나 배경 위에서 텍스트 가독성을 위한 대비 색상 */
 }
 
 /* 내비게이션 메뉴 색상 정의 - 다음 색상 변수들은 내비게이션 메뉴에만 특별히 사용됩니다. 전역 색상과 분리되어 있어 더 많은 커스터마이징 옵션을 제공합니다. */
 :root {
-  --nav-color: #ffffff;  /* 메인 내비게이션 메뉴 링크의 기본 색상 */
-  --nav-hover-color: #c9a0ff; /* 메인 내비게이션 메뉴 링크에 마우스를 올리거나 활성화 되었을 때 적용되는 색상 */
-  --nav-mobile-background-color: #1a1a1a; /* 모바일 내비게이션 메뉴의 배경색으로 사용 */
+  --nav-color: #ffffff;
+  /* 메인 내비게이션 메뉴 링크의 기본 색상 */
+  --nav-hover-color: #c9a0ff;
+  /* 메인 내비게이션 메뉴 링크에 마우스를 올리거나 활성화 되었을 때 적용되는 색상 */
+  --nav-mobile-background-color: #1a1a1a;
+  /* 모바일 내비게이션 메뉴의 배경색으로 사용 */
 }
 
 /* 색상 프리셋 - 이 클래스들은 전역 색상을 덮어쓰며, 어떤 섹션이나 요소에 적용할 때 동일한 색상 체계를 재사용할 수 있도록 합니다. */
@@ -182,13 +192,36 @@ h6 {
 }
 
 .scrolled .header {
+  --background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
+
+
 /* 전역 헤더 on Scroll
 ------------------------------*/
-.scrolled .header {
-  --background-color: rgba(0, 0, 0, 0.8);
+
+/* 로고를 제거했을 때 우측 메뉴 정렬 균형용 자리 */
+.header-space {
+  width: 150px;
+  /* 로고 대체 폭 */
+  flex: 0 0 150px;
+  /* 고정 폭으로 자리 확보 */
+}
+
+/* 데스크톱에서 네비를 오른쪽 끝으로 밀기 (HTML에서 ms-auto 안 쓰는 경우에만) */
+@media (min-width: 1200px) {
+  #header .navmenu {
+    margin-left: auto;
+    /* 헤더 내 오른쪽 정렬 */
+  }
+}
+
+/* 모바일에서는 자리 차지하지 않게 숨김 */
+@media (max-width: 1199px) {
+  .header-space {
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -270,59 +303,59 @@ h6 {
   }
 
 
-/* Mobile Navigation */
-@media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
-    line-height: 0;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
+  /* Mobile Navigation */
+  @media (max-width: 1199px) {
+    .mobile-nav-toggle {
+      color: var(--nav-color);
+      font-size: 28px;
+      line-height: 0;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
 
-  .navmenu {
-    padding: 0;
-    z-index: 9997;
-  }
+    .navmenu {
+      padding: 0;
+      z-index: 9997;
+    }
 
-  .navmenu ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-  }
+    .navmenu ul {
+      display: none;
+      list-style: none;
+      position: absolute;
+      inset: 60px 20px 20px 20px;
+      padding: 10px 0;
+      margin: 0;
+      border-radius: 6px;
+      background-color: var(--nav-mobile-background-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      box-shadow: none;
+      overflow-y: auto;
+      transition: 0.3s;
+      z-index: 9998;
+    }
 
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  }
+    .navmenu a i,
+    .navmenu a:focus i {
+      font-size: 12px;
+      line-height: 0;
+      margin-left: 5px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: 0.3s;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    }
 
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-  }
+    .navmenu a i:hover,
+    .navmenu a:focus i:hover {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+    }
 
 
   }
@@ -371,7 +404,7 @@ h6 {
 }
 
 .footer p {
-  font-size: 15;
+  font-size: 15px;
   font-style: italic;
   padding: 0;
   margin: 0 0 30px 0;
@@ -413,7 +446,8 @@ h6 {
 }
 
 .footer .creative-title {
-  color: #c9a0ff; /* 보라색 */
+  color: #c9a0ff;
+  /* 보라색 */
 }
 
 
@@ -603,7 +637,8 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh; /* 화면 전체 채움 */
+  min-height: 100vh;
+  /* 화면 전체 채움 */
   position: relative;
   overflow: hidden;
   display: flex;
@@ -618,7 +653,8 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  filter: brightness(0.85); /* 텍스트 대비를 위한 살짝 어두움 */
+  filter: brightness(0.85);
+  /* 텍스트 대비를 위한 살짝 어두움 */
 }
 
 /* 텍스트 컨테이너 (이미지 위 오버레이) */
@@ -644,7 +680,8 @@ section,
 
 .hero p span {
   letter-spacing: 1px;
-  border-bottom: 2px solid #c9a0ff; /* 포인트 컬러 */
+  border-bottom: 2px solid #c9a0ff;
+  /* 포인트 컬러 */
 }
 
 /* SNS 링크 */
