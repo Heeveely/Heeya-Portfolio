@@ -1362,17 +1362,24 @@ section,
   position: relative;
   overflow: hidden;
 }
+/* === Portfolio Thumbnail Fixed Size (수정본) === */
 .portfolio .portfolio-content .portfolio-thumb {
   width: 100%;
-  height: 250px;  /* 혹은 더 높이 지정 */
+  /* 고정 height 대신 비율로 박스 만들기 */
+  aspect-ratio: 4 / 3; /* 4:3 비율, 맘에 안 들면 16 / 9 로 바꿔도 됨 */
   overflow: hidden;
+  border-radius: 10px;
 }
+
+/* 이미지가 너무 잘리지 않게 contain으로 */
 .portfolio .portfolio-content .portfolio-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;   /* 전체 이미지 보이게 */
   object-position: center;
+  background: #050505;   /* 여백 생길 때 배경색 */
 }
+
 .portfolio .portfolio-content .portfolio-info {
   position: absolute;
   inset: 0;
