@@ -1007,7 +1007,7 @@ section,
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 14px;
+  font-size: 14px;.portfolio .portfolio-content img {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0 0 0 45px;
 }
@@ -1107,18 +1107,15 @@ section,
   }
 }
 
+/* === 여기서부터 썸네일/오버레이 원본 구조 === */
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
 }
 
-/* 기존 코드 위치 교체 */
 .portfolio .portfolio-content img {
-  width: 100%;
-  height: 260px;          /* 🔹 썸네일 공통 높이 지정 (원하는 값으로 조절 가능) */
-  object-fit: cover;      /* 🔹 비율 유지하면서 넘치는 부분 잘라내기 */
-  object-position: center;/* 🔹 가운데 기준으로 잘리게 */
   transition: 0.3s;
+}
 
 .portfolio .portfolio-content .portfolio-info {
   opacity: 0;
@@ -1126,45 +1123,42 @@ section,
   inset: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6); /* 썸네일 위 어두운 레이어 */
   padding: 15px;
 }
 
+/* 이미지 왼쪽 상단에 들어가는 App 1 / Product 1 같은 텍스트 */
 .portfolio .portfolio-content .portfolio-info h4 {
   font-size: 14px;
   padding: 5px 10px;
   font-weight: 400;
   color: #ffffff;
   display: inline-block;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color); /* 색 테두리 박스 */
 }
 
+/* 설명 문구는 이미지 하단 중앙 고정 */
 .portfolio .portfolio-content .portfolio-info p {
-  /* 절대 위치 제거해서 겹침 방지 */
-  position: static;
-  margin: 8px 0 0;
-  text-align: left;
-  display: block;
-  font-size: 15px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-
+/* 확대 아이콘 / 링크 아이콘 - 가운데 위치 */
 .portfolio .portfolio-content .portfolio-info .preview-link,
 .portfolio .portfolio-content .portfolio-info .details-link {
   position: absolute;
-  left: calc(50% - 40px);
-  font-size: 26px;
+  left: calc(50% - 40px); /* 첫 번째 아이콘 기준 */
   top: calc(50% - 14px);
-  color: #fff;
+  font-size: 26px;
+  color: #ffffff;
   transition: 0.3s;
   line-height: 1.2;
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
 }
 
 .portfolio .portfolio-content .portfolio-info .details-link {
@@ -1173,6 +1167,12 @@ section,
   line-height: 0;
 }
 
+.portfolio .portfolio-content .portfolio-info .preview-link:hover,
+.portfolio .portfolio-content .portfolio-info .details-link:hover {
+  color: var(--accent-color);
+}
+
+/* 썸네일에 마우스 올렸을 때: 어두워지고 텍스트/아이콘 등장 */
 .portfolio .portfolio-content:hover .portfolio-info {
   opacity: 1;
 }
