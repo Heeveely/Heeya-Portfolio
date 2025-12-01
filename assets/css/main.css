@@ -1136,16 +1136,16 @@ section,
 }
 
 .portfolio .portfolio-content .portfolio-info p {
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  display: inline-block;
-  left: 0;
-  right: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  /* 절대 위치 제거해서 겹침 방지 */
+  position: static;
+  margin: 8px 0 0;
+  text-align: left;
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
 }
+
 
 .portfolio .portfolio-content .portfolio-info .preview-link,
 .portfolio .portfolio-content .portfolio-info .details-link {
@@ -1355,46 +1355,4 @@ section,
   color: #fff;
   padding: 8px 16px;
   z-index: 10000;
-}
-
-/* --- Portfolio overlay fix (specificity 강화) --- */
-.portfolio .portfolio-content {
-  position: relative;
-  overflow: hidden;
-}
-/* === Portfolio Thumbnail Fixed Size (수정본) === */
-.portfolio .portfolio-content .portfolio-thumb {
-  width: 100%;
-  /* 고정 height 대신 비율로 박스 만들기 */
-  aspect-ratio: 4 / 3; /* 4:3 비율, 맘에 안 들면 16 / 9 로 바꿔도 됨 */
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-/* 이미지가 너무 잘리지 않게 contain으로 */
-.portfolio .portfolio-content .portfolio-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;   /* 전체 이미지 보이게 */
-  object-position: center;
-  background: #050505;   /* 여백 생길 때 배경색 */
-}
-
-.portfolio .portfolio-content .portfolio-info {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 20px;
-  opacity: 0;
-  transition: 0.3s;
-  background: rgba(0,0,0,0.45);
-}
-.portfolio .portfolio-content:hover .portfolio-info {
-  opacity: 1;
-}
-.portfolio .portfolio-content .portfolio-links a {
-  font-size: 24px;
-  color: #fff !important;
 }
