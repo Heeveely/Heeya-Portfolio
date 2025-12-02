@@ -1376,6 +1376,8 @@ section,
 .portfolio .portfolio-content img {
   display: block;
   width: 100%;
+  height: 260px;       /* 썸네일 높이 통일 */
+  object-fit: cover;   /* 가운데 기준으로 잘라줌 */
   transition: 0.3s;
 }
 
