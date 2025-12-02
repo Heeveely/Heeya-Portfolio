@@ -1107,58 +1107,64 @@ section,
   }
 }
 
-/* === 여기서부터 썸네일/오버레이 원본 구조 === */
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
 }
 
 .portfolio .portfolio-content img {
+  display: block;
+  width: 100%;
+  /* 아래 두 줄을 추가하면, 전부 같은 높이 + 가운데 기준으로 잘림 */
+  /* height: 260px;
+     object-fit: cover; */
   transition: 0.3s;
 }
-
 .portfolio .portfolio-content .portfolio-info {
   opacity: 0;
   position: absolute;
   inset: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: rgba(0, 0, 0, 0.6); /* 썸네일 위 어두운 레이어 */
+  background: rgba(0, 0, 0, 0.6);
   padding: 15px;
 }
 
-/* 이미지 왼쪽 상단에 들어가는 App 1 / Product 1 같은 텍스트 */
 .portfolio .portfolio-content .portfolio-info h4 {
   font-size: 14px;
   padding: 5px 10px;
   font-weight: 400;
   color: #ffffff;
   display: inline-block;
-  background-color: var(--accent-color); /* 색 테두리 박스 */
+  background-color: var(--accent-color);
 }
 
-/* 설명 문구는 이미지 하단 중앙 고정 */
 .portfolio .portfolio-content .portfolio-info p {
   position: absolute;
   bottom: 10px;
+  text-align: center;
+  display: inline-block;
   left: 0;
   right: 0;
-  text-align: center;
   font-size: 16px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* 확대 아이콘 / 링크 아이콘 - 가운데 위치 */
 .portfolio .portfolio-content .portfolio-info .preview-link,
 .portfolio .portfolio-content .portfolio-info .details-link {
   position: absolute;
-  left: calc(50% - 40px); /* 첫 번째 아이콘 기준 */
-  top: calc(50% - 14px);
+  left: calc(50% - 40px);
   font-size: 26px;
-  color: #ffffff;
+  top: calc(50% - 14px);
+  color: #fff;
   transition: 0.3s;
   line-height: 1.2;
+}
+
+.portfolio .portfolio-content .portfolio-info .preview-link:hover,
+.portfolio .portfolio-content .portfolio-info .details-link:hover {
+  color: var(--accent-color);
 }
 
 .portfolio .portfolio-content .portfolio-info .details-link {
@@ -1167,12 +1173,6 @@ section,
   line-height: 0;
 }
 
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-/* 썸네일에 마우스 올렸을 때: 어두워지고 텍스트/아이콘 등장 */
 .portfolio .portfolio-content:hover .portfolio-info {
   opacity: 1;
 }
@@ -1359,4 +1359,86 @@ section,
   color: #fff;
   padding: 8px 16px;
   z-index: 10000;
+}
+
+/* ===============================================
+   Portfolio Section – 원래 템플릿 동작으로 복구
+   (이미지 위 왼쪽 상단에 App 1 라벨, 
+    아래쪽에 설명글, 호버 시 어두운 오버레이)
+   =============================================== */
+
+.portfolio .portfolio-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-content img {
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+}
+
+/* 이미지 위에 덮이는 오버레이 전체 영역 */
+.portfolio .portfolio-content .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+}
+
+/* 왼쪽 상단에 들어가는 작은 라벨 (App 1, Product 1 등) */
+.portfolio .portfolio-content .portfolio-info h4 {
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 400;
+  color: #ffffff;
+  display: inline-block;
+  background-color: var(--accent-color);
+}
+
+/* 카드 설명 텍스트 – 아래쪽에 고정 */
+.portfolio .portfolio-content .portfolio-info p {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 가운데 아이콘 두 개 (돋보기 + 링크 아이콘) */
+.portfolio .portfolio-content .portfolio-info .preview-link,
+.portfolio .portfolio-content .portfolio-info .details-link {
+  position: absolute;
+  top: calc(50% - 14px);
+  font-size: 26px;
+  line-height: 1.2;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-content .portfolio-info .preview-link {
+  left: calc(50% - 40px);
+}
+
+.portfolio .portfolio-content .portfolio-info .details-link {
+  left: 50%;
+  font-size: 34px;
+  line-height: 0;
+}
+
+/* hover 시 오버레이 나타나게 */
+.portfolio .portfolio-content:hover .portfolio-info {
+  opacity: 1;
+}
+
+/* hover 시 이미지 살짝 확대 */
+.portfolio .portfolio-content:hover img {
+  transform: scale(1.1);
 }
