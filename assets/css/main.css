@@ -1007,7 +1007,7 @@ section,
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 14px;.portfolio .portfolio-content img {
+  font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0 0 0 45px;
 }
@@ -1118,6 +1118,7 @@ section,
   /* 아래 두 줄을 추가하면, 전부 같은 높이 + 가운데 기준으로 잘림 */
   /* height: 260px;
      object-fit: cover; */
+
   transition: 0.3s;
 }
 .portfolio .portfolio-content .portfolio-info {
