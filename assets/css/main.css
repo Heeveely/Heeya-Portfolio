@@ -1245,6 +1245,13 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+/* Portfolio Details – Responsive long image layout */
+.portfolio-details .portfolio-longshots img {
+  width: 100%;      /* 부모(col-12)에 맞게 꽉 채움 */
+  height: auto;     /* 비율 유지 */
+  display: block;   /* 이미지 아래 여백 제거 */
+}
+
 
 /*--------------------------------------------------------------
 # Contact Section
