@@ -1390,3 +1390,17 @@ section,
   padding: 8px 16px;
   z-index: 10000;
 }
+
+/* Portfolio video */
+.portfolio-video-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.portfolio-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
