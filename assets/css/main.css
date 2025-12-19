@@ -1156,6 +1156,19 @@ section,
   color: var(--accent-color);
 }
 
+.portfolio .portfolio-content .portfolio-info .details-link:hover {
+  color: var(--accent-color);
+}
+
+
+.portfolio .portfolio-content:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio .portfolio-content:hover img {
+  transform: scale(1.1);
+}
+
 /* 링크 아이콘만 정확히 정중앙 */
 .portfolio .portfolio-content .portfolio-info .details-link {
   position: absolute;
@@ -1169,19 +1182,6 @@ section,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-
-.portfolio .portfolio-content:hover .portfolio-info {
-  opacity: 1;
-}
-
-.portfolio .portfolio-content:hover img {
-  transform: scale(1.1);
 }
 
 /*--------------------------------------------------------------
@@ -1432,22 +1432,6 @@ section,
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* 가운데 아이콘 두 개 (링크 아이콘) */
-.portfolio .portfolio-content .portfolio-info .details-link {
-  position: absolute;
-  top: calc(50% - 14px);
-  font-size: 26px;
-  line-height: 1.2;
-  color: #ffffff;
-  transition: 0.3s;
-}
-
-
-.portfolio .portfolio-content .portfolio-info .details-link {
-  left: 50%;
-  font-size: 34px;
-  line-height: 0;
-}
 
 /* hover 시 오버레이 나타나게 */
 .portfolio .portfolio-content:hover .portfolio-info {
