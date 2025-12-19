@@ -1256,6 +1256,24 @@ section,
   overflow: visible;
 }
 
+/* =====================================
+   Portfolio Video (Detail Page)
+   ===================================== */
+
+.portfolio-video-wrapper {
+  width: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.portfolio-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 80vh; /* 화면 너무 넘지 않게 */
+  object-fit: contain;
+}
 
 
 /*--------------------------------------------------------------
