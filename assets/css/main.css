@@ -770,7 +770,6 @@ section,
   width: 360px;
   height: auto;
   border-radius: 0;
-  box-shadow: 0 0 30px rgba(163, 124, 255, 0.2);
   transition: transform 0.4s ease;
 }
 #about .profile-photo:hover {
@@ -1516,17 +1515,4 @@ section,
 .info-card p {
   color: #aaa;
   font-size: 14px;
-}
-
-
-/* Portfolio Detail Scroll Animation */
-.reveal-section {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.reveal-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
