@@ -1412,53 +1412,66 @@ section,
 }
 
 
-/* Portfolio Detail – Card Style */
+
+/* Portfolio Detail – Dark Theme Card (Index Match) */
+
+.portfolio-details img {
+  width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
 
 .portfolio-details .detail-card {
-  background: #fff;
+  border: 1px solid rgba(155, 89, 182, 0.6); /* 보라색 */
+  background: rgba(255, 255, 255, 0.03);
   padding: 40px;
-  border-radius: 16px;
-  margin-bottom: 60px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  border-radius: 12px;
+  margin-bottom: 80px;
 }
 
 .portfolio-details .detail-title {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #fff;
+}
+
+.portfolio-details p,
+.portfolio-details li {
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
 }
 
 .portfolio-details .grid-info {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 30px;
 }
 
 .portfolio-details .grid-info span {
-  font-size: 0.8rem;
+  display: block;
+  font-size: 0.75rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #888;
-}
-
-.portfolio-details .accent-left {
-  border-left: 4px solid #222;
-  padding-left: 20px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
 }
 
 .portfolio-details .keyword {
+  color: #c084fc; /* 보라 강조 */
   font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: 10px;
 }
 
-.portfolio-details .process-steps li {
-  margin-bottom: 12px;
-  line-height: 1.6;
+.portfolio-details .process-steps li strong {
+  color: #fff;
+  margin-right: 6px;
 }
 
 .portfolio-details .detail-note {
-  margin-top: 20px;
+  margin-top: 24px;
+  padding-left: 14px;
+  border-left: 3px solid rgba(155, 89, 182, 0.6);
   font-size: 0.9rem;
-  color: #777;
+  color: rgba(255,255,255,0.6);
 }
