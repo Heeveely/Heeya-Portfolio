@@ -1516,3 +1516,20 @@ section,
   color: #aaa;
   font-size: 14px;
 }
+
+
+/* Portfolio Detail – project-info 에서 소제목 넣기*/
+.project-info .features-item {
+  background-color: transparent;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.project-info .features-item p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--default-color);
+}
+
+.project-info .features-item:hover {
+  border-color: var(--accent-color);
+}
