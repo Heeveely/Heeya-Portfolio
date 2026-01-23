@@ -1412,60 +1412,53 @@ section,
 }
 
 
-/* Portfolio Detail Custom */
+/* Portfolio Detail – Card Style */
 
-.portfolio-divider {
-  margin: 80px 0;
-  border-bottom: 1px solid #e5e5e5;
+.portfolio-details .detail-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  margin-bottom: 60px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
 }
 
-.portfolio-section {
-  margin-bottom: 80px;
-}
-
-.section-title {
+.portfolio-details .detail-title {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.portfolio-section p {
-  line-height: 1.8;
-  color: #555;
+.portfolio-details .grid-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
 }
 
-.project-info {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.portfolio-details .grid-info span {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #888;
 }
 
-.project-info li {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-}
-
-.project-info li span {
-  min-width: 110px;
-  font-weight: 600;
-  color: #222;
-}
-
-.design-process {
+.portfolio-details .accent-left {
+  border-left: 4px solid #222;
   padding-left: 20px;
-  margin-bottom: 30px;
 }
 
-.design-process li {
+.portfolio-details .keyword {
+  font-weight: 600;
+  letter-spacing: 1px;
   margin-bottom: 10px;
-  line-height: 1.7;
 }
 
-.portfolio-note {
+.portfolio-details .process-steps li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.portfolio-details .detail-note {
+  margin-top: 20px;
   font-size: 0.9rem;
   color: #777;
-  border-left: 3px solid #ddd;
-  padding-left: 12px;
 }
