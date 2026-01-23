@@ -1391,16 +1391,81 @@ section,
   z-index: 10000;
 }
 
-/* Portfolio video */
+/* =====================================
+   Portfolio Video – Full Width Responsive
+   ===================================== */
+
 .portfolio-video-wrapper {
   width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #000;
+  max-width: 100%;
+  margin: 0 auto 40px;
 }
 
 .portfolio-video {
   width: 100%;
   height: auto;
+  max-height: 90vh;          /* 화면 너무 넘어가지 않게 */
   display: block;
+  object-fit: contain;       /* 영상 잘림 없이 전체 보이게 */
+  border-radius: 8px;        /* 디자인 통일감 (선택) */
+  background: #000;          /* 로딩 시 검정 배경 */
+}
+
+
+/* Portfolio Detail Custom */
+
+.portfolio-divider {
+  margin: 80px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.portfolio-section {
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.portfolio-section p {
+  line-height: 1.8;
+  color: #555;
+}
+
+.project-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-info li {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.project-info li span {
+  min-width: 110px;
+  font-weight: 600;
+  color: #222;
+}
+
+.design-process {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.design-process li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+.portfolio-note {
+  font-size: 0.9rem;
+  color: #777;
+  border-left: 3px solid #ddd;
+  padding-left: 12px;
 }
