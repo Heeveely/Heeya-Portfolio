@@ -1475,3 +1475,58 @@ section,
   font-size: 0.9rem;
   color: rgba(255,255,255,0.6);
 }
+
+.final-output {
+  margin-bottom: 120px; /* 또는 100~140px 사이에서 조절 */
+}
+
+
+
+/* Portfolio Detail – project-info */
+
+.project-info {
+  margin-bottom: 140px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  border: 1px solid rgba(170, 120, 255, 0.4);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.info-card img {
+  width: 48px;
+  margin-bottom: 16px;
+}
+
+.info-card h4 {
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.info-card p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+
+/* Portfolio Detail Scroll Animation */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
