@@ -769,7 +769,7 @@ section,
 #about .profile-photo {
   width: 360px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 30px rgba(163, 124, 255, 0.2);
   transition: transform 0.4s ease;
 }
