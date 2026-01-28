@@ -1465,16 +1465,14 @@ section,
   margin-top: 0;
 }
 
-.design-process .detail-note {
+.portfolio-details .detail-note {
   margin-top: 50px;
-  padding: 24px 30px;
+  padding-left: 20px;
   border-left: 3px solid rgba(201, 160, 255, 0.6);
-  background: rgba(201, 160, 255, 0.05);
-  border-radius: 8px;
   font-size: 0.95rem;
   color: rgba(255,255,255,0.7);
   line-height: 1.8;
-  max-width: 700px;
+  max-width: 900px; /* 프로세스 플로우와 같은 너비 */
   margin-left: auto;
   margin-right: auto;
   text-align: left;
@@ -1507,8 +1505,8 @@ section,
 }
 
 .portfolio-details .section-title {
-  margin-top: 60px; /* 섹션 제목 위 간격 */
-  padding-bottom: 40px; /* 섹션 제목 아래 간격 */
+  margin-top: 60px;
+  padding-bottom: 20px; /* 40px에서 20px로 줄임 */
 }
 
 /* =====================================
@@ -1604,3 +1602,8 @@ section,
   margin: 0;
 }
 
+/* Project Information 섹션만 위쪽 간격 제거 */
+#project-info {
+  padding-top: 0;
+  margin-top: -20px; /* 제목과 더 가깝게 */
+}
