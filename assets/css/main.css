@@ -1466,15 +1466,17 @@ section,
 }
 
 .portfolio-details .detail-note {
-  margin-top: 50px;
-  padding-left: 20px;
-  border-left: 3px solid rgba(201, 160, 255, 0.6);
+  margin-top: 60px;
+  padding: 28px 30px;
+  border-left: 5px solid #c9a0ff; /* 3px → 5px로 더 굵게 */
+  background: rgba(201, 160, 255, 0.06); /* 연한 배경 추가 */
+  border-radius: 0 8px 8px 0; /* 오른쪽만 둥글게 */
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.75);
   line-height: 1.8;
-  max-width: 900px; /* 프로세스 플로우와 같은 너비 */
-  margin-left: auto;
-  margin-right: auto;
+  max-width: none; /* 폭 제한 제거 */
+  margin-left: 0; /* 왼쪽 정렬 */
+  margin-right: 0;
   text-align: left;
 }
 
