@@ -1472,18 +1472,17 @@ section,
 
 .portfolio-details .detail-note {
   margin-top: 60px;
-  padding: 28px 30px;
+  padding: 0; /* 패딩 제거 */
   border-left: 5px solid #c9a0ff; /* 굵은 보라색 바 */
   background: rgba(201, 160, 255, 0.06);
-  border-radius: 0 8px 8px 0;
+  border-radius: 0;
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.8;
-  margin-left: 0; /* 왼쪽 정렬 */
+  margin-left: 0;
   margin-right: 0;
   text-align: left;
 }
-
 .final-output {
   margin-bottom: 120px; /* 또는 100~140px 사이에서 조절 */
 }
@@ -1620,12 +1619,19 @@ section,
   margin-top: -20px; /* 제목과 더 가깝게 */
 }
 
-/* 추가 제안 */
+/* Project Information 박스 높이 통일 및 중앙 정렬 */
 #project-info .stats-item {
-  min-height: 180px;  /* 카드 높이 통일 */
+  min-height: 140px;  /* 3줄 텍스트 기준 높이 */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;  /* 좌우 중앙 정렬 추가 */
+  text-align: center;   /* 텍스트 중앙 정렬 */
+}
+
+#project-info .stats-item .info-label,
+#project-info .stats-item .info-content {
+  text-align: center;  /* 라벨과 내용 모두 중앙 정렬 */
 }
 
 @media (max-width: 768px) {
