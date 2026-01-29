@@ -1467,26 +1467,16 @@ section,
 
 .portfolio-details .detail-note {
   margin-top: 60px;
-  padding: 28px 30px 28px 70px; /* 왼쪽 패딩 증가 (아이콘 공간) */
+  padding: 28px 30px;
+  border-left: 5px solid #c9a0ff; /* 굵은 보라색 바 */
   background: rgba(201, 160, 255, 0.06);
-  border-radius: 8px;
+  border-radius: 0 8px 8px 0;
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.8;
-  max-width: none;
-  margin-left: 0;
+  margin-left: 0; /* 왼쪽 정렬 */
   margin-right: 0;
   text-align: left;
-  position: relative; /* 아이콘 위치 기준 */
-}
-
-/* 전구 아이콘 스타일 */
-.reflection-icon {
-  position: absolute;
-  left: 28px;
-  top: 28px;
-  font-size: 24px;
-  color: #c9a0ff;
 }
 
 .final-output {
@@ -1527,6 +1517,7 @@ section,
 .design-process {
   max-width: 900px;
   margin: 0 auto 80px;
+  padding: 0; /* 양쪽 패딩 제거 */
 }
 
 .process-flow {
