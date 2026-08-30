@@ -1471,11 +1471,11 @@ section,
 }
 
 .portfolio-details .detail-note {
-  margin-top: 60px;
-  padding: 0; /* 패딩 제거 */
-  border-left: 5px solid #c9a0ff; /* 굵은 보라색 바 */
+  margin-top: 20px; /* 60px → 20px, 이제 위에 process-flow가 없으니 간격 줄여도 됨 */
+  padding: 28px 32px; /* 0 → 여백 추가 */
+  border-left: 5px solid #c9a0ff;
   background: rgba(201, 160, 255, 0.06);
-  border-radius: 0;
+  border-radius: 0 8px 8px 0; /* 오른쪽만 살짝 둥글게, 선택사항 */
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.8;
@@ -1483,6 +1483,7 @@ section,
   margin-right: 0;
   text-align: left;
 }
+
 .final-output {
   margin-bottom: 120px; /* 또는 100~140px 사이에서 조절 */
 }
